@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="refresh" content="300">
+    <title>Portfólio Tech</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0657f9",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1623",
+                        "surface-dark": "#1E293B",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    animation: {
+                        'soft-pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar hiding for clean UI */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header: Sticky nav -->
+        <header
+            class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-[#0f1623]/80 border-b border-gray-200 dark:border-gray-800">
+            <div class="flex items-center h-16 justify-between px-4">
+                <div
+                    class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-lg tracking-tight">AS</span>
+                </div>
+                <div class="flex w-12 items-center justify-end">
+                    <button
+                        class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary">
+                        <span class="material-symbols-outlined" style="font-size: 24px;">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section
+            class="relative flex flex-col items-center justify-center min-h-[60vh] p-6 text-center overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none"
+                style="background: radial-gradient(circle at 50% 50%, #0657f9 0%, transparent 70%);"></div>
+            <div class="relative z-10 flex flex-col items-center gap-6 max-w-lg">
+                <div class="size-24 rounded-full border-2 border-primary p-1">
+                    <div class="w-full h-full rounded-full bg-cover bg-center"
+                        data-alt="Foto profissional de um engenheiro de software"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA457MBQKz_7OhdozgF0xtZXdogTlZk11M4iEzxMoFaueE6kvIR3Jt10dbCkWk8VDUtDhOLlYkTUkYc5axX6uMU3cnNpnARHQzytE605T0_Xze7AygVQJGQJUnnFsTBLjUO97PT6WGCNnjDlWdyZho6RKmfY8UYC4W1vqFfSwXVSqnesXOd1ls4UEM-0KBTYG9g0GoTEc7PZWhhxojc9Fyh-jDbYTquS7nc62hiPFFgvfhUL5AsXi-TQzTH7vpovlaR6tICNG8HpdQ');">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+                        Alexandre Silva
+                    </h1>
+                    <p
+                        class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-normal uppercase tracking-widest">
+                        Backend • DevOps • Cloud • Data
+                    </p>
+                </div>
+                <p
+                    class="text-base md:text-lg text-gray-800 dark:text-gray-300 font-medium max-w-xs mx-auto leading-relaxed">
+                    Construindo sistemas escaláveis e infraestrutura resiliente.
+                </p>
+                <button
+                    class="relative flex items-center justify-center px-8 h-12 bg-primary hover:bg-blue-700 text-white text-base font-bold rounded-full transition-all mt-4 shadow-[0_0_20px_rgba(6,87,249,0.4)] hover:shadow-[0_0_30px_rgba(6,87,249,0.6)] animate-soft-pulse group">
+                    <span>Ver Projetos</span>
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform"
+                        style="font-size: 20px;">arrow_forward</span>
+                </button>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="px-6 py-8 md:py-12 max-w-4xl mx-auto w-full">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="h-px flex-1 bg-gray-300 dark:bg-gray-800"></span>
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase">Sobre Mim</h2>
+                <span class="h-px flex-1 bg-gray-300 dark:bg-gray-800"></span>
+            </div>
+            <p class="text-xl md:text-2xl font-bold leading-snug mb-4">
+                Engenheiro Sênior focado em automação, observabilidade e sistemas distribuídos de alta escala.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4">
+                Transformando infraestrutura complexa em código confiável. Com mais de 8 anos de experiência, sou
+                especialista em
+                construir serviços backend robustos e otimizar arquiteturas em nuvem para desempenho e eficiência de
+                custos.
+            </p>
+            <a class="inline-flex items-center text-primary font-bold hover:underline" href="#">
+                Ler biografia completa
+                <span class="material-symbols-outlined ml-1" style="font-size: 18px;">chevron_right</span>
+            </a>
+        </section>
+        <!-- Certifications Section (Horizontal Scroll) -->
+        <section class="py-8 bg-gray-100 dark:bg-[#131b2c] w-full">
+            <div class="px-6 mb-6 flex justify-between items-end">
+                <h2 class="text-2xl font-bold">Certificações</h2>
+                <div class="flex gap-2">
+                    <span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">drag_handle</span>
+                </div>
+            </div>
+            <!-- Horizontal Carousel -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 px-6 pb-6 scrollbar-hide">
+                <!-- Card 1 -->
+                <div
+                    class="snap-center shrink-0 w-[280px] bg-white dark:bg-[#1E293B] rounded-xl p-5 border-l-4 border-primary shadow-lg dark:shadow-none flex flex-col gap-4">
+                    <div
+                        class="size-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">cloud</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight mb-1">AWS Certificado</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Arquiteto de Soluções Profissional</p>
+                    </div>
+                    <div
+                        class="mt-auto pt-2 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                        <span class="text-xs font-mono text-gray-400">ID: KK928-11</span>
+                        <span class="text-primary text-xs font-bold">VERIFICADO</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="snap-center shrink-0 w-[280px] bg-white dark:bg-[#1E293B] rounded-xl p-5 border-l-4 border-primary shadow-lg dark:shadow-none flex flex-col gap-4">
+                    <div
+                        class="size-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">deployed_code</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight mb-1">CKA</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Administrador Certificado Kubernetes</p>
+                    </div>
+                    <div
+                        class="mt-auto pt-2 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                        <span class="text-xs font-mono text-gray-400">ID: LF-442</span>
+                        <span class="text-primary text-xs font-bold">VERIFICADO</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="snap-center shrink-0 w-[280px] bg-white dark:bg-[#1E293B] rounded-xl p-5 border-l-4 border-primary shadow-lg dark:shadow-none flex flex-col gap-4">
+                    <div
+                        class="size-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined" style="font-size: 32px;">architecture</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight mb-1">Terraform</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">HashiCorp Associado em Infraestrutura</p>
+                    </div>
+                    <div
+                        class="mt-auto pt-2 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                        <span class="text-xs font-mono text-gray-400">ID: HC-991</span>
+                        <span class="text-primary text-xs font-bold">VERIFICADO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="px-6 py-12 max-w-4xl mx-auto w-full">
+            <h2 class="text-2xl font-bold mb-8">Projetos Selecionados</h2>
+            <div class="flex flex-col gap-6">
+                <!-- Project Card A -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-6 backdrop-blur-md hover:bg-white/80 dark:hover:bg-white/10 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">api</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a class="p-2 hover:bg-gray-200 dark:hover:bg-white/20 rounded-full transition-colors text-gray-600 dark:text-gray-300"
+                                href="#">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">code</span>
+                            </a>
+                            <a class="p-2 hover:bg-gray-200 dark:hover:bg-white/20 rounded-full transition-colors text-gray-600 dark:text-gray-300"
+                                href="#">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">API de Pagamentos em Alta Escala</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
+                        Uma arquitetura de microsserviços distribuída processando mais de 10 mil transações por segundo.
+                        Construída com padrões de resiliência e observabilidade abrangente.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">Go</span>
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">gRPC</span>
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">Redis</span>
+                    </div>
+                </div>
+                <!-- Project Card B -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 p-6 backdrop-blur-md hover:bg-white/80 dark:hover:bg-white/10 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">dns</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a class="p-2 hover:bg-gray-200 dark:hover:bg-white/20 rounded-full transition-colors text-gray-600 dark:text-gray-300"
+                                href="#">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">code</span>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Framework IaC Multi-Cloud</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
+                        Módulos de provisionamento automatizado para ambientes AWS e GCP, reduzindo o tempo de
+                        implantação em 60%.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">Terraform</span>
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">AWS</span>
+                        <span
+                            class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <button
+                    class="px-6 py-2 rounded-lg border border-gray-300 dark:border-gray-700 text-sm font-bold hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                    Ver Todos os Projetos
+                </button>
+            </div>
+        </section>
+        <!-- Tech Stack Accordions -->
+        <section class="px-6 pb-12 max-w-4xl mx-auto w-full">
+            <h2 class="text-2xl font-bold mb-6">Arsenal Técnico</h2>
+            <div class="flex flex-col gap-4">
+                <!-- Backend Accordion -->
+                <details class="group bg-gray-100 dark:bg-[#131b2c] rounded-xl overflow-hidden" open="">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                            <span class="font-bold text-lg">Engenharia Backend</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Go</div>
+                            <span class="text-xs font-medium opacity-70">Go</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Py</div>
+                            <span class="text-xs font-medium opacity-70">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Rs</div>
+                            <span class="text-xs font-medium opacity-70">Rust</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                No</div>
+                            <span class="text-xs font-medium opacity-70">Node</span>
+                        </div>
+                    </div>
+                </details>
+                <!-- DevOps Accordion -->
+                <details class="group bg-gray-100 dark:bg-[#131b2c] rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">settings_suggest</span>
+                            <span class="font-bold text-lg">DevOps &amp; Nuvem</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                K8s</div>
+                            <span class="text-xs font-medium opacity-70">K8s</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                tf</div>
+                            <span class="text-xs font-medium opacity-70">Terraform</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                aws</div>
+                            <span class="text-xs font-medium opacity-70">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                dk</div>
+                            <span class="text-xs font-medium opacity-70">Docker</span>
+                        </div>
+                    </div>
+                </details>
+                <!-- Data Accordion -->
+                <details class="group bg-gray-100 dark:bg-[#131b2c] rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">database</span>
+                            <span class="font-bold text-lg">Dados &amp; Armazenamento</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Pg</div>
+                            <span class="text-xs font-medium opacity-70">Postgres</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Rd</div>
+                            <span class="text-xs font-medium opacity-70">Redis</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Kfk</div>
+                            <span class="text-xs font-medium opacity-70">Kafka</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="size-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-xl font-bold">
+                                Es</div>
+                            <span class="text-xs font-medium opacity-70">Elastic</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="mt-auto py-8 bg-gray-100 dark:bg-black w-full border-t border-gray-200 dark:border-gray-800">
+            <div class="flex flex-col items-center justify-center gap-6 px-4">
+                <div class="flex gap-4">
+                    <a class="p-3 bg-white dark:bg-white/10 rounded-full hover:scale-110 transition-transform text-slate-900 dark:text-white"
+                        href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                    <a class="p-3 bg-white dark:bg-white/10 rounded-full hover:scale-110 transition-transform text-slate-900 dark:text-white"
+                        href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500 dark:text-gray-500">
+                        © 2024 Alexandre Silva.
+                    </p>
+                    <p class="text-xs text-gray-400 dark:text-gray-600 mt-1">
+                        Criado com Tailwind &amp; Space Grotesk
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <div class="h-6 w-full bg-background-light dark:bg-background-dark"></div>
+    </div>
+</body>
+
+</html>
