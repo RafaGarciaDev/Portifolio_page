@@ -152,10 +152,17 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full">
-                <button class="flex w-full sm:flex-1 cursor-pointer items-center justify-center rounded-lg h-12 sm:h-14 px-6 bg-primary text-white text-sm sm:text-base font-bold tracking-wide neon-shadow hover:bg-blue-600 transition-all active:scale-[0.98]">
+                <button onclick="window.location.href='projetos.html'" class="flex w-full sm:flex-1 cursor-pointer items-center justify-center rounded-lg h-12 sm:h-14 px-6 bg-primary text-white text-sm sm:text-base font-bold tracking-wide neon-shadow hover:bg-blue-600 transition-all active:scale-[0.98]">
                     Ver Projetos
                 </button>
-                <button class="flex w-full sm:flex-1 cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-900 dark:text-white font-medium transition-colors active:scale-[0.98]">
+                <button onclick="window.location.href='certificados.html'" class="flex w-full sm:flex-1 cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-900 dark:text-white font-medium transition-colors active:scale-[0.98]">
+                    <span class="material-symbols-outlined mr-2 text-[20px]">workspace_premium</span>
+                    Ver Certificados
+                </button>
+            </div>
+
+            <div class="flex w-full mt-3">
+                <button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-900 dark:text-white font-medium transition-colors active:scale-[0.98]">
                     <span class="material-symbols-outlined mr-2 text-[20px]">download</span>
                     Baixar CV
                 </button>
@@ -249,6 +256,26 @@
             </div>
         </section>
     </main>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-white/5 px-4 sm:px-6 py-3 pb-safe flex justify-around sm:justify-center sm:gap-12 items-center z-50 transition-colors duration-300">
+        <div class="flex flex-col items-center gap-1 opacity-100 cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-[22px] sm:text-[24px] shadow-[0_4px_10px_rgba(13,89,242,0.25)] dark:shadow-[0_0_15px_rgba(13,89,242,0.5)] rounded-full transition-all duration-300">home</span>
+            <span class="text-[10px] font-bold text-primary transition-colors duration-300">Início</span>
+        </div>
+        <a href="projetos.html" class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+            <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">work</span>
+            <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Projetos</span>
+        </a>
+        <a href="certificados.html" class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+            <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">workspace_premium</span>
+            <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Certificados</span>
+        </a>
+        <div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+            <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">mail</span>
+            <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Contato</span>
+        </div>
+    </div>
 
     <script>
         // Toggle de tema
