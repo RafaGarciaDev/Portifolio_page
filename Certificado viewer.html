@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificado FIAP - Visualização Protegida</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -16,33 +18,21 @@
             font-family: 'Space Grotesk', sans-serif;
             background: #0a0e1a;
             overflow: hidden;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
             user-select: none;
         }
 
-        /* Proteção contra print */
         @media print {
             body {
                 display: none !important;
             }
-            body::before {
-                content: "IMPRESSÃO BLOQUEADA" !important;
-                display: block !important;
-                font-size: 48px !important;
-                text-align: center !important;
-                padding: 100px !important;
-            }
         }
 
-        /* Header com instruções */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #0d59f2 0%, #1a73ff 100%);
+            background: linear-gradient(135deg, #0d59f2, #1a73ff);
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
@@ -56,340 +46,163 @@
             font-weight: 700;
             font-size: 18px;
             display: flex;
-            align-items: center;
             gap: 10px;
         }
 
         .header-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255,255,255,.2);
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 11px;
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
-        .warning-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 68, 68, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 12px 30px;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 600;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .warning-icon {
-            font-size: 20px;
-        }
-
-        /* Container do iframe */
         .iframe-container {
             position: fixed;
             top: 60px;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 50px;
             background: white;
         }
 
-        #certificateFrame {
+        iframe {
             width: 100%;
             height: 100%;
             border: none;
-            pointer-events: auto;
         }
 
-        /* Watermark de proteção (múltiplas camadas) */
-        .watermark {
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            font-weight: 700;
-            color: rgba(0, 0, 0, 0.02);
-            white-space: nowrap;
-            user-select: none;
-        }
-
-        .watermark-1 {
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 80px;
-        }
-
-        .watermark-2 {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 100px;
-        }
-
-        .watermark-3 {
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 80px;
-        }
-
-        /* Loading */
         .loading {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 9998;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            background: #0a0e1a;
         }
 
         .spinner {
             width: 60px;
             height: 60px;
-            border: 4px solid rgba(13, 89, 242, 0.1);
-            border-top: 4px solid #0d59f2;
+            border: 4px solid rgba(13,89,242,.2);
+            border-top-color: #0d59f2;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }
         }
 
         .loading-text {
             color: #0d59f2;
             font-weight: 600;
-            font-size: 16px;
         }
 
-        /* Camada de proteção invisível sobre o iframe */
-        .protection-overlay {
+        .watermark {
             position: fixed;
-            top: 60px;
-            left: 0;
-            right: 0;
-            bottom: 50px;
             pointer-events: none;
-            z-index: 9997;
-            background: transparent;
+            font-weight: 800;
+            color: rgba(0,0,0,.03);
+            font-size: 90px;
+            transform: rotate(-45deg);
+            z-index: 9998;
         }
+
+        .wm1 { top: 20%; left: 10%; }
+        .wm2 { top: 50%; left: 30%; }
+        .wm3 { top: 80%; left: 50%; }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="header-title">
-            🔒 Certificado FIAP
-            <span class="header-badge">VISUALIZAÇÃO PROTEGIDA</span>
-        </div>
-        <div style="color: white; font-size: 13px; opacity: 0.9;">
-            ⚠️ Download e impressão bloqueados
-        </div>
+
+<div class="header">
+    <div class="header-title">
+        🔒 Certificado FIAP
+        <span class="header-badge">VISUALIZAÇÃO PROTEGIDA</span>
     </div>
+    <div style="color:white;font-size:13px">Download e impressão bloqueados</div>
+</div>
 
-    <!-- Loading -->
-    <div class="loading" id="loading">
-        <div class="spinner"></div>
-        <div class="loading-text">Carregando certificado protegido...</div>
-    </div>
+<div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">Carregando certificado protegido...</div>
+</div>
 
-    <!-- Watermarks de proteção -->
-    <div class="watermark watermark-1">CERTIFICADO PROTEGIDO</div>
-    <div class="watermark watermark-2">NÃO IMPRIMIR</div>
-    <div class="watermark watermark-3">VISUALIZAÇÃO APENAS</div>
+<div class="watermark wm1">CERTIFICADO PROTEGIDO</div>
+<div class="watermark wm2">VISUALIZAÇÃO APENAS</div>
+<div class="watermark wm3">NÃO IMPRIMIR</div>
 
-    <!-- Container do Iframe -->
-    <div class="iframe-container">
-        <iframe id="certificateFrame" src="about:blank"></iframe>
-    </div>
+<div class="iframe-container">
+    <iframe id="certificateFrame"></iframe>
+</div>
 
-    <!-- Camada de proteção -->
-    <div class="protection-overlay"></div>
+<script>
+    /* ============================
+       MAPA DE CERTIFICADOS
+       ============================ */
 
-    <!-- Warning Banner -->
-   <!-- <div class="warning-banner">-->
-    <!--    <span class="warning-icon">⚠️</span>-->
-    <!--    Este certificado está protegido contra impressão, download e captura de tela-->
-    <!--</div>-->
+    const certificates = {
+        fiap:     'https://drive.google.com/file/d/ID_FIAP/preview',
+        cloud:    'https://drive.google.com/file/d/1hw-IqGhsQDJBxbX1xtIk4Im7NDU9EiHr/preview',
+        infra:    'https://drive.google.com/file/d/19p7_Yljet43z5V7msbi79d0WCzGigSIu/preview',
+        security: 'https://drive.google.com/file/d/1s8hx-1QtPAYJvxm9NsD22_u5MgAOlhCP/preview',
+        bigdata:  'https://drive.google.com/file/d/1NkGSoaaybgSn0j7VbiWunSqC9fYLC432/preview',
+        bi:       'https://drive.google.com/file/d/19epamT2iJfQgS5zQdLa6CbZB-PIXbNcw/preview',
+        ia:       'https://drive.google.com/file/d/1o2Vk8R0ksG7dQ5nIof7tCUxOLg_zZulQ/preview',
+        software: 'https://drive.google.com/file/d/1E0L-Psuds733jExDhU5rolGPizNz67qg/preview'
+    };
 
-    <script>
-        // URL do certificado
-        const CERTIFICATE_URL = 'https://drive.google.com/drive/folders/1DDogRGWRZIumlCx6AW01eZw-fXXrLeAQ?usp=sharing';
+    /* ============================
+       SELEÇÃO DO CERTIFICADO
+       ============================ */
 
-        // Inicializar proteções
-        function initProtections() {
-            console.log('🛡️ Inicializando proteções de segurança...');
-            
-            // Bloquear print
-            window.onbeforeprint = function(e) {
-                e.preventDefault();
-                alert('⛔ A impressão deste certificado está BLOQUEADA por motivos de segurança.\n\nPara obter uma cópia oficial, entre em contato com a FIAP.');
-                return false;
-            };
+    const params = new URLSearchParams(window.location.search);
+    const certType = params.get('cert') || 'fiap';
+    const CERTIFICATE_URL = certificates[certType];
 
-            // Bloquear todas as teclas de atalho perigosas
-            document.addEventListener('keydown', function(e) {
-                // Bloquear Ctrl+P (Print)
-                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    alert('⛔ IMPRESSÃO BLOQUEADA\n\nEste certificado não pode ser impresso.');
-                    return false;
-                }
-                
-                // Bloquear Ctrl+S (Save)
-                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    alert('⛔ DOWNLOAD BLOQUEADO\n\nEste certificado não pode ser baixado.');
-                    return false;
-                }
+    if (!CERTIFICATE_URL) {
+        alert('Certificado não encontrado.');
+    }
 
-                // Bloquear PrintScreen
-                if (e.key === 'PrintScreen' || e.keyCode === 44) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    alert('⛔ CAPTURA DE TELA BLOQUEADA\n\nEste certificado está protegido.');
-                    return false;
-                }
+    /* ============================
+       PROTEÇÕES
+       ============================ */
 
-                // Bloquear Ctrl+Shift+S (Save as)
-                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 's') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    return false;
-                }
-
-                // Bloquear Ctrl+U (View source)
-                if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    return false;
-                }
-            }, true); // Use capture phase para pegar antes de qualquer outro handler
-
-            // Bloquear context menu (botão direito)
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                alert('⛔ Menu de contexto desabilitado por segurança.');
-                return false;
-            }, true);
-
-            // Bloquear seleção de texto
-            document.addEventListener('selectstart', function(e) {
-                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-
-            // Bloquear drag
-            document.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
-
-            // Sobrescrever funções de print
-            window.print = function() {
-                alert('⛔ A função de impressão foi desabilitada para este documento.');
-                return false;
-            };
-
-            // Desabilitar CSS de print via JavaScript também
-            if (window.matchMedia) {
-                const mediaQueryList = window.matchMedia('print');
-                mediaQueryList.addListener(function(mql) {
-                    if (mql.matches) {
-                        alert('⛔ Tentativa de impressão bloqueada!');
-                        window.stop();
-                    }
-                });
-            }
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+        if (
+            (e.ctrlKey || e.metaKey) &&
+            ['p','s','u'].includes(e.key.toLowerCase())
+        ) {
+            e.preventDefault();
+            alert('⛔ Ação bloqueada por segurança.');
         }
-
-        // Carregar certificado
-        function loadCertificate() {
-            console.log('🔒 Iniciando carregamento do certificado protegido...');
-            
-            const iframe = document.getElementById('certificateFrame');
-            const loading = document.getElementById('loading');
-
-            // Carregar URL
-            iframe.src = CERTIFICATE_URL;
-            console.log('📄 URL do certificado:', CERTIFICATE_URL);
-
-            // Esconder loading quando carregar
-            iframe.onload = function() {
-                console.log('✅ Certificado carregado com sucesso!');
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                }, 500);
-
-                // Tentar aplicar proteções no iframe também (pode não funcionar por CORS)
-                try {
-                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    
-                    // Tentar bloquear print no iframe
-                    iframe.contentWindow.onbeforeprint = function(e) {
-                        e.preventDefault();
-                        alert('⛔ Impressão bloqueada no documento.');
-                        return false;
-                    };
-
-                    // Desabilitar print no iframe
-                    iframe.contentWindow.print = function() {
-                        alert('⛔ Impressão desabilitada.');
-                        return false;
-                    };
-
-                    iframeDoc.addEventListener('keydown', function(e) {
-                        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            alert('⛔ Impressão bloqueada.');
-                            return false;
-                        }
-                    }, true);
-
-                    iframeDoc.addEventListener('contextmenu', function(e) {
-                        e.preventDefault();
-                        return false;
-                    });
-
-                } catch (error) {
-                    console.log('Cross-origin iframe - proteções aplicadas na camada externa');
-                }
-            };
-
-            iframe.onerror = function() {
-                loading.innerHTML = '<div class="loading-text" style="color: #ff4444;">Erro ao carregar certificado. Tentando novamente...</div>';
-                setTimeout(() => {
-                    iframe.src = CERTIFICATE_URL;
-                }, 2000);
-            };
+        if (e.key === 'PrintScreen') {
+            e.preventDefault();
+            alert('⛔ Captura de tela bloqueada.');
         }
+    });
 
-        // Iniciar tudo quando a página carregar
-        window.addEventListener('DOMContentLoaded', function() {
-            initProtections();
-            loadCertificate();
-        });
+    window.print = () => alert('⛔ Impressão desabilitada.');
 
-        // Garantir que proteções sejam re-aplicadas
-        window.addEventListener('focus', function() {
-            initProtections();
-        });
-    </script>
+    /* ============================
+       LOAD DO CERTIFICADO
+       ============================ */
+
+    const iframe = document.getElementById('certificateFrame');
+    const loading = document.getElementById('loading');
+
+    iframe.src = CERTIFICATE_URL;
+
+    iframe.onload = () => {
+        setTimeout(() => loading.style.display = 'none', 600);
+    };
+</script>
+
 </body>
 </html>
