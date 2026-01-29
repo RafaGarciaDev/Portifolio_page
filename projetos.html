@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DevOps Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfólio DevOps - Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -30,200 +31,253 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
-          min-height: max(884px, 100dvh);
+            min-height: max(884px, 100dvh);
         }
-    </style>
-<script>
-        function toggleTheme() {
-            const html = document.querySelector('html');
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-            } else {
-                html.classList.add('dark');
+        
+        /* Responsividade */
+        @media (min-width: 640px) {
+            .container-responsive {
+                max-width: 640px;
             }
         }
-    </script>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
+        @media (min-width: 768px) {
+            .container-responsive {
+                max-width: 768px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container-responsive {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
 <body class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden font-display transition-colors duration-300">
-<div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
-<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors">
-<span class="material-symbols-outlined text-[24px]">arrow_back</span>
-</div>
-<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-0">Portfolio</h2>
-<div class="w-12 items-center justify-end flex">
-<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors" onclick="toggleTheme()">
-<span class="material-symbols-outlined text-[20px]">light_mode</span>
-</button>
-</div>
-</div>
-<div class="flex-1 flex flex-col pb-24">
-<div>
-<h2 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-6 transition-colors duration-300">Featured Projects</h2>
-<div class="p-4 pt-2">
-<div class="relative group overflow-hidden rounded-xl border border-gray-200/80 dark:border-primary/30 bg-white dark:bg-gray-900 shadow-soft dark:shadow-neon transition-all duration-300 hover:shadow-lg dark:hover:shadow-[0_0_25px_rgba(13,89,242,0.25)]">
-<div class="h-[200px] w-full bg-cover bg-center relative" data-alt="Abstract blue digital network visualization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDTaczxf9Rmfb1hcgHRAXE1xupISflstZlglFXmgaF8g-ueKKI8F3rZf51_pXBOR2vW6vf2DGNC_MHaupLhNtyS8Ik4sjXpLxYsNvT1WGInYvRW4QQwcCHpyXqRWb5uapBg7sCZ1hKzCKjIjd-SmNDDxvZMKTPElUjWDFSiGQ68cgdIJlu594inpAdMNIGPEJxl_zlkl-ExCCIsndbQfdTHHrTX7zZoE3NJuyraNfxTMXPu-fVlDibfMKzcdEPmradOkXmXRJX8tY");'>
-<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-white/40 dark:via-background-dark/60 to-transparent transition-colors duration-300"></div>
-</div>
-<div class="relative -mt-16 p-5 flex flex-col gap-3">
-<div class="flex justify-between items-start">
-<div>
-<p class="text-blue-700 dark:text-primary text-xs font-bold tracking-widest uppercase mb-1 transition-colors duration-300">DevOps Automation</p>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight transition-colors duration-300">AWS Infra Scaling</h3>
-</div>
-<div class="bg-blue-50 dark:bg-primary/20 backdrop-blur-sm rounded-lg px-3 py-1 border border-blue-100 dark:border-primary/30 transition-colors duration-300">
-<span class="text-blue-700 dark:text-primary text-sm font-bold transition-colors duration-300">-60% Cost</span>
-</div>
-</div>
-<p class="text-slate-600 dark:text-slate-300 text-sm font-body leading-relaxed transition-colors duration-300">
-                            Implemented auto-scaling groups and spot instances to optimize resource usage during peak traffic loads.
-                        </p>
-<div class="flex flex-wrap gap-2 mt-2">
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Terraform</span>
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">AWS</span>
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Docker</span>
-</div>
-<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-blue-700 text-white text-sm font-bold tracking-wide transition-all shadow-md dark:shadow-[0_0_10px_rgba(13,89,242,0.4)]">
-<span>View Case Study</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="relative group overflow-hidden rounded-xl border border-gray-200/80 dark:border-primary/30 bg-white dark:bg-gray-900 shadow-soft dark:shadow-neon transition-all duration-300 hover:shadow-lg dark:hover:shadow-[0_0_25px_rgba(13,89,242,0.25)]">
-<div class="h-[200px] w-full bg-cover bg-center relative" data-alt="Data flowing through a dark digital pipeline" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4pRTfhltbokuP9UrtcY89pVIMtE0JZt171mMoMjiRYG7cl_jfW2jze8LGJi9cFQqrw9sV6_33pyOugjvPDI2u-e9nbzst4Rms-_LECf80_IBBTSKKqIsXSVMGahT_vRpf6wYY8exWSgw8lWnlOS984OyP9axbh-un0WGockgZSAX-EzHgEOqQOSt1ncoUPNPJLvO4PLqwPJ97JbhH1-shb6VkR5nS6aCAV9P5P-TG9no-pfov_vcZSbtoCwX3PZ4QRpVqurnQkGs");'>
-<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-white/40 dark:via-background-dark/60 to-transparent transition-colors duration-300"></div>
-</div>
-<div class="relative -mt-16 p-5 flex flex-col gap-3">
-<div class="flex justify-between items-start">
-<div>
-<p class="text-blue-700 dark:text-primary text-xs font-bold tracking-widest uppercase mb-1 transition-colors duration-300">Data Engineering</p>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight transition-colors duration-300">Real-time Pipeline</h3>
-</div>
-<div class="bg-blue-50 dark:bg-primary/20 backdrop-blur-sm rounded-lg px-3 py-1 border border-blue-100 dark:border-primary/30 transition-colors duration-300">
-<span class="text-blue-700 dark:text-primary text-sm font-bold transition-colors duration-300">1TB+ Daily</span>
-</div>
-</div>
-<p class="text-slate-600 dark:text-slate-300 text-sm font-body leading-relaxed transition-colors duration-300">
-                            Architected a streaming data solution processing logs for real-time analytics dashboards.
-                        </p>
-<div class="flex flex-wrap gap-2 mt-2">
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Kafka</span>
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Python</span>
-<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Snowflake</span>
-</div>
-<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-blue-700 text-white text-sm font-bold tracking-wide transition-all shadow-md dark:shadow-[0_0_10px_rgba(13,89,242,0.4)]">
-<span>View Case Study</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="h-4"></div>
-<div>
-<h2 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight px-4 text-left pb-4 pt-2 transition-colors duration-300">Tech Stack</h2>
-<div class="px-4 mb-6">
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Cloud &amp; Infrastructure</h3>
-<div class="grid grid-cols-4 gap-3">
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">cloud</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">AWS</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">deployed_code</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Docker</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">view_module</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">K8s</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">dns</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Terraform</span>
-</div>
-</div>
-</div>
-<div class="px-4 mb-6">
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Data &amp; Backend</h3>
-<div class="grid grid-cols-4 gap-3">
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">code</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Python</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">database</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">SQL</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">schema</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Kafka</span>
-</div>
-<div class="flex flex-col items-center gap-2 group">
-<div class="size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[28px] transition-colors duration-300">terminal</span>
-</div>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Bash</span>
-</div>
-</div>
-</div>
-<div class="px-4 mb-6">
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Tools &amp; Monitoring</h3>
-<div class="flex flex-wrap gap-3">
-<div class="flex items-center gap-2 h-10 px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[20px] transition-colors duration-300">monitoring</span>
-<span class="text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Grafana</span>
-</div>
-<div class="flex items-center gap-2 h-10 px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[20px] transition-colors duration-300">notifications</span>
-<span class="text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Prometheus</span>
-</div>
-<div class="flex items-center gap-2 h-10 px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
-<span class="material-symbols-outlined text-blue-600 dark:text-primary text-[20px] transition-colors duration-300">gavel</span>
-<span class="text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Jenkins</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fixed bottom-0 w-full bg-white/80 dark:bg-background-dark/90 backdrop-blur-xl border-t border-gray-200 dark:border-white/5 px-6 py-3 pb-6 flex justify-between items-center z-50 transition-colors duration-300">
-<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
-<span class="material-symbols-outlined text-slate-900 dark:text-white text-[24px] transition-colors duration-300">home</span>
-<span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Home</span>
-</div>
-<div class="flex flex-col items-center gap-1 opacity-100 cursor-pointer">
-<span class="material-symbols-outlined text-primary text-[24px] shadow-[0_4px_10px_rgba(13,89,242,0.25)] dark:shadow-[0_0_15px_rgba(13,89,242,0.5)] rounded-full transition-all duration-300">work</span>
-<span class="text-[10px] font-bold text-primary transition-colors duration-300">Work</span>
-</div>
-<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
-<span class="material-symbols-outlined text-slate-900 dark:text-white text-[24px] transition-colors duration-300">person</span>
-<span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">About</span>
-</div>
-<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
-<span class="material-symbols-outlined text-slate-900 dark:text-white text-[24px] transition-colors duration-300">mail</span>
-<span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Contact</span>
-</div>
-</div>
+    <div class="container-responsive mx-auto">
+        <!-- Top Navigation -->
+        <div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
+            <div class="text-slate-900 dark:text-white flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors">
+                <span class="material-symbols-outlined text-[20px] sm:text-[24px]">arrow_back</span>
+            </div>
+            <h2 class="text-slate-900 dark:text-white text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-0">Portfólio</h2>
+            <div class="w-10 sm:w-12 items-center justify-end flex">
+                <button id="themeToggle" class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors">
+                    <span id="themeIcon" class="material-symbols-outlined text-[20px]">light_mode</span>
+                </button>
+            </div>
+        </div>
 
-</body></html>
+        <div class="flex-1 flex flex-col pb-24">
+            <!-- Featured Projects Section -->
+            <div>
+                <h2 class="text-slate-900 dark:text-white tracking-tight text-2xl sm:text-[28px] lg:text-3xl font-bold leading-tight px-4 sm:px-6 text-left pb-3 pt-6 transition-colors duration-300">Projetos em Destaque</h2>
+                
+                <!-- Project 1 -->
+                <div class="p-4 sm:p-6 pt-2">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/80 dark:border-primary/30 bg-white dark:bg-gray-900 shadow-soft dark:shadow-neon transition-all duration-300 hover:shadow-lg dark:hover:shadow-[0_0_25px_rgba(13,89,242,0.25)]">
+                        <div class="h-[180px] sm:h-[200px] lg:h-[220px] w-full bg-cover bg-center relative" data-alt="Visualização de rede digital abstrata azul" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDTaczxf9Rmfb1hcgHRAXE1xupISflstZlglFXmgaF8g-ueKKI8F3rZf51_pXBOR2vW6vf2DGNC_MHaupLhNtyS8Ik4sjXpLxYsNvT1WGInYvRW4QQwcCHpyXqRWb5uapBg7sCZ1hKzCKjIjd-SmNDDxvZMKTPElUjWDFSiGQ68cgdIJlu594inpAdMNIGPEJxl_zlkl-ExCCIsndbQfdTHHrTX7zZoE3NJuyraNfxTMXPu-fVlDibfMKzcdEPmradOkXmXRJX8tY");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-white/40 dark:via-background-dark/60 to-transparent transition-colors duration-300"></div>
+                        </div>
+                        <div class="relative -mt-16 p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-blue-700 dark:text-primary text-xs font-bold tracking-widest uppercase mb-1 transition-colors duration-300">Automação DevOps</p>
+                                    <h3 class="text-slate-900 dark:text-white text-xl sm:text-2xl font-bold leading-tight transition-colors duration-300">Escalabilidade AWS</h3>
+                                </div>
+                                <div class="bg-blue-50 dark:bg-primary/20 backdrop-blur-sm rounded-lg px-3 py-1 border border-blue-100 dark:border-primary/30 transition-colors duration-300 shrink-0">
+                                    <span class="text-blue-700 dark:text-primary text-sm font-bold transition-colors duration-300 whitespace-nowrap">-60% Custo</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm font-body leading-relaxed transition-colors duration-300">
+                                Implementei grupos de auto-scaling e instâncias spot para otimizar o uso de recursos durante picos de tráfego.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Terraform</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">AWS</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Docker</span>
+                            </div>
+                            <button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg h-10 sm:h-11 px-4 bg-primary hover:bg-blue-700 text-white text-sm font-bold tracking-wide transition-all shadow-md dark:shadow-[0_0_10px_rgba(13,89,242,0.4)]">
+                                <span>Ver Estudo de Caso</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/80 dark:border-primary/30 bg-white dark:bg-gray-900 shadow-soft dark:shadow-neon transition-all duration-300 hover:shadow-lg dark:hover:shadow-[0_0_25px_rgba(13,89,242,0.25)]">
+                        <div class="h-[180px] sm:h-[200px] lg:h-[220px] w-full bg-cover bg-center relative" data-alt="Dados fluindo através de um pipeline digital escuro" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4pRTfhltbokuP9UrtcY89pVIMtE0JZt171mMoMjiRYG7cl_jfW2jze8LGJi9cFQqrw9sV6_33pyOugjvPDI2u-e9nbzst4Rms-_LECf80_IBBTSKKqIsXSVMGahT_vRpf6wYY8exWSgw8lWnlOS984OyP9axbh-un0WGockgZSAX-EzHgEOqQOSt1ncoUPNPJLvO4PLqwPJ97JbhH1-shb6VkR5nS6aCAV9P5P-TG9no-pfov_vcZSbtoCwX3PZ4QRpVqurnQkGs");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-white/40 dark:via-background-dark/60 to-transparent transition-colors duration-300"></div>
+                        </div>
+                        <div class="relative -mt-16 p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-blue-700 dark:text-primary text-xs font-bold tracking-widest uppercase mb-1 transition-colors duration-300">Engenharia de Dados</p>
+                                    <h3 class="text-slate-900 dark:text-white text-xl sm:text-2xl font-bold leading-tight transition-colors duration-300">Pipeline em Tempo Real</h3>
+                                </div>
+                                <div class="bg-blue-50 dark:bg-primary/20 backdrop-blur-sm rounded-lg px-3 py-1 border border-blue-100 dark:border-primary/30 transition-colors duration-300 shrink-0">
+                                    <span class="text-blue-700 dark:text-primary text-sm font-bold transition-colors duration-300 whitespace-nowrap">2M+ msg/s</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm font-body leading-relaxed transition-colors duration-300">
+                                Construí um pipeline de streaming com Kafka e Spark para processar milhões de eventos em tempo real com latência mínima.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Kafka</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Spark</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-medium text-slate-700 dark:text-white border border-slate-200 dark:border-white/5 transition-colors duration-300">Python</span>
+                            </div>
+                            <button class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg h-10 sm:h-11 px-4 bg-primary hover:bg-blue-700 text-white text-sm font-bold tracking-wide transition-all shadow-md dark:shadow-[0_0_10px_rgba(13,89,242,0.4)]">
+                                <span>Ver Estudo de Caso</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-4"></div>
+
+            <!-- Tech Stack Section -->
+            <div>
+                <h2 class="text-slate-900 dark:text-white tracking-tight text-2xl sm:text-[28px] lg:text-3xl font-bold leading-tight px-4 sm:px-6 text-left pb-4 pt-2 transition-colors duration-300">Stack Tecnológico</h2>
+                
+                <!-- Cloud & Infrastructure -->
+                <div class="px-4 sm:px-6 mb-6">
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Nuvem &amp; Infraestrutura</h3>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-3">
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">cloud</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">deployed_code</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">view_module</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">K8s</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">dns</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Backend -->
+                <div class="px-4 sm:px-6 mb-6">
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Dados &amp; Backend</h3>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-3">
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">code</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">database</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">SQL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">schema</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Kafka</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div class="size-12 sm:size-14 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                                <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[24px] sm:text-[28px] transition-colors duration-300">terminal</span>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 transition-colors duration-300">Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Monitoring -->
+                <div class="px-4 sm:px-6 mb-6">
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider mb-3 transition-colors duration-300">Ferramentas &amp; Monitoramento</h3>
+                    <div class="flex flex-wrap gap-2 sm:gap-3">
+                        <div class="flex items-center gap-2 h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                            <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[18px] sm:text-[20px] transition-colors duration-300">monitoring</span>
+                            <span class="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Grafana</span>
+                        </div>
+                        <div class="flex items-center gap-2 h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                            <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[18px] sm:text-[20px] transition-colors duration-300">notifications</span>
+                            <span class="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Prometheus</span>
+                        </div>
+                        <div class="flex items-center gap-2 h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300">
+                            <span class="material-symbols-outlined text-blue-600 dark:text-primary text-[18px] sm:text-[20px] transition-colors duration-300">gavel</span>
+                            <span class="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 transition-colors duration-300">Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/90 backdrop-blur-xl border-t border-gray-200 dark:border-white/5 px-4 sm:px-6 py-3 pb-safe flex justify-around sm:justify-center sm:gap-12 items-center z-50 transition-colors duration-300 max-w-full">
+            <div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">home</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Início</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 opacity-100 cursor-pointer">
+                <span class="material-symbols-outlined text-primary text-[22px] sm:text-[24px] shadow-[0_4px_10px_rgba(13,89,242,0.25)] dark:shadow-[0_0_15px_rgba(13,89,242,0.5)] rounded-full transition-all duration-300">work</span>
+                <span class="text-[10px] font-bold text-primary transition-colors duration-300">Trabalho</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">person</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Sobre</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">mail</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Contato</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle de tema
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Verifica preferência salva ou preferência do sistema
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+            html.classList.remove('dark');
+            themeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.add('dark');
+            themeIcon.textContent = 'light_mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            
+            if (html.classList.contains('dark')) {
+                themeIcon.textContent = 'light_mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = 'dark_mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
