@@ -57,6 +57,129 @@
                 max-width: 900px;
             }
         }
+
+        /* Proteção contra print */
+        @media print {
+            #certificateModal {
+                display: none !important;
+            }
+            body::after {
+                content: "Impressão bloqueada para proteção do certificado";
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                padding: 50px;
+            }
+        }
+
+        /* Estilo do Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 95%;
+            height: 95%;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 20px;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .certificate-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: auto;
+        }
+
+        /* Proteção contra seleção */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Proteção adicional contra context menu */
+        .protected {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Watermark de proteção */
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 72px;
+            color: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+            z-index: 9998;
+            white-space: nowrap;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white transition-colors duration-300">
@@ -89,10 +212,14 @@
 
                 <!-- Grid -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 px-4 sm:px-6">
-                    <!-- Card 1 -->
-                    <div class="group flex flex-col gap-3 p-3 sm:p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <!-- Card 1 - FIAP (Clicável) -->
+                    <div onclick="openCertificate()" class="group flex flex-col gap-3 p-3 sm:p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
                         <div class="w-full aspect-[4/3] bg-slate-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
                             <div class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="Logo geométrico vermelho da universidade FIAP" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmGdpJH7PXzxsD2CUKU_dinUYPJZn4Z3y1prLQCpYwPs_P1JdXImW22Zc-ULNeRB6Y0X5iuS9AItZZtHS_b3DGsKQ5F-kx9rXEi1Hq89sMN26mSIf3JIe3EJERwWGCgu76VSaryADsmLe3diA2E_gm0XYlTT18MgzwYriLOQ3R4sxi1XvczzlItjhG18cNG7lLteviXE08_FfaMIeGD_08DDMyu68kGdvisf5lO-fDFrRj3k-szVZL_OGGFtv4LCUA_A0t6-Pf6wI");'>
+                            </div>
+                            <!-- Badge de visualização -->
+                            <div class="absolute top-2 right-2 bg-primary/90 backdrop-blur-sm text-white px-2 py-1 rounded-full text-[10px] font-bold">
+                                Clique para ver
                             </div>
                         </div>
                         <div>
@@ -116,12 +243,12 @@
                     <!-- Card 3 -->
                     <div class="group flex flex-col gap-3 p-3 sm:p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md">
                         <div class="w-full aspect-[4/3] bg-slate-100 dark:bg-white/5 rounded-xl overflow-hidden relative">
-                            <div class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="Ícone azul de certificado Coursera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCG9Y-sDZvHLhkKcR8hjXjvvYR5APEdxwmkQT4CR-SuKWLsgiEz_n4VWG1bLZMHVeoNM_OEB3IjMzgTNRYl-uUdS45b8h8nVdPdVK4IWVURs7oX9dcnffFq9ng1QzPm0RZMZAIaWsXF0tyvunPglguUOpCKUf-ix1z2BhUTJ691qB4UoYxx7LMQF_UtImXuA4Ijn9YxEMkDyQLxgs21s0X3lkmmoJfUqhJ_ZyrDvhfRt2ZKKE-h9AAAnuZ7gltPrn6X0ZHk3gv5C1o");'>
+                            <div class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="Logo azul Docker containers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYB3xgdlGt_bwHJMpBl_zG3Yg0HgluwSkJAyUpStfnFSmnLR21b_bnPCuF1F4f6s1DhIuMWNCi2AvdBzBhaTVvQVg5OO8FqKdD8U7FnoDTAqUfN1PFqy7Sng2PqZl4U1mWpI5xqZJbMbBOzJbUh9nMGh4SRyI4ov-l2hJ1zfW6N-Sx8-bSn2dJGWlr1dW-nCDzAzFSu51Z0H78XhOpH9WEVOAVYglPJbbugr_yDjPcJCGq4bZF7q79s_w5Jnn4Xr7TIaG0Qb4");'>
                             </div>
                         </div>
                         <div>
-                            <p class="text-slate-900 dark:text-white text-sm sm:text-base font-bold leading-tight">Eng. Dados</p>
-                            <p class="text-slate-500 dark:text-gray-400 text-xs font-medium mt-1">Cert. Coursera</p>
+                            <p class="text-slate-900 dark:text-white text-sm sm:text-base font-bold leading-tight">Docker Master</p>
+                            <p class="text-slate-500 dark:text-gray-400 text-xs font-medium mt-1">Containers</p>
                         </div>
                     </div>
 
@@ -213,7 +340,169 @@
         </footer>
     </div>
 
+    <!-- Modal do Certificado -->
+    <div id="certificateModal" class="modal-overlay protected no-select">
+        <div class="watermark">VISUALIZAÇÃO PROTEGIDA</div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="text-white font-bold text-sm sm:text-base">Certificado FIAP - Visualização Protegida</div>
+                <button onclick="closeCertificate()" class="modal-close">
+                    <span class="material-symbols-outlined text-[20px]">close</span>
+                </button>
+            </div>
+            <iframe 
+                id="certificateFrame"
+                class="certificate-iframe protected"
+                sandbox="allow-same-origin allow-scripts"
+                referrerpolicy="no-referrer"
+            ></iframe>
+        </div>
+    </div>
+
     <script>
+        // URL do certificado FIAP
+        const CERTIFICATE_URL = 'https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=3f8447fc78053bce551b93c4658e171a&action=view';
+
+        // Proteções de segurança
+        function initializeProtections() {
+            // Bloquear print
+            window.addEventListener('beforeprint', (e) => {
+                e.preventDefault();
+                alert('A impressão deste certificado está bloqueada por motivos de segurança.');
+                return false;
+            });
+
+            // Bloquear Ctrl+P
+            document.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    alert('A impressão deste certificado está bloqueada por motivos de segurança.');
+                    return false;
+                }
+                
+                // Bloquear Ctrl+S (salvar)
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    alert('O download deste certificado está bloqueado por motivos de segurança.');
+                    return false;
+                }
+
+                // Bloquear PrintScreen
+                if (e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    alert('Captura de tela bloqueada por motivos de segurança.');
+                    return false;
+                }
+
+                // Bloquear F12 / DevTools
+                if (e.key === 'F12' || 
+                    ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Bloquear context menu
+            document.addEventListener('contextmenu', (e) => {
+                if (e.target.closest('#certificateModal')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Bloquear arrastar
+            document.addEventListener('dragstart', (e) => {
+                if (e.target.closest('#certificateModal')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Detectar DevTools
+            const devtools = /./;
+            devtools.toString = function() {
+                this.opened = true;
+            }
+            
+            setInterval(() => {
+                console.log('%c', devtools);
+                if (devtools.opened) {
+                    const modal = document.getElementById('certificateModal');
+                    if (modal.classList.contains('active')) {
+                        closeCertificate();
+                        alert('Ferramentas de desenvolvedor detectadas. O certificado foi fechado por segurança.');
+                    }
+                }
+            }, 1000);
+        }
+
+        // Abrir modal do certificado
+        function openCertificate() {
+            const modal = document.getElementById('certificateModal');
+            const iframe = document.getElementById('certificateFrame');
+            
+            // Carregar certificado
+            iframe.src = CERTIFICATE_URL;
+            
+            // Mostrar modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Adicionar proteções específicas ao iframe
+            iframe.onload = function() {
+                try {
+                    // Tentar adicionar proteções ao conteúdo do iframe
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    
+                    // Bloquear context menu no iframe
+                    iframeDoc.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        return false;
+                    });
+
+                    // Bloquear seleção no iframe
+                    iframeDoc.addEventListener('selectstart', (e) => {
+                        e.preventDefault();
+                        return false;
+                    });
+                } catch(e) {
+                    // Cross-origin - não podemos acessar o conteúdo
+                    console.log('Proteções aplicadas apenas ao container');
+                }
+            };
+        }
+
+        // Fechar modal
+        function closeCertificate() {
+            const modal = document.getElementById('certificateModal');
+            const iframe = document.getElementById('certificateFrame');
+            
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Limpar iframe após animação
+            setTimeout(() => {
+                iframe.src = '';
+            }, 300);
+        }
+
+        // Fechar ao clicar fora
+        document.getElementById('certificateModal').addEventListener('click', (e) => {
+            if (e.target.id === 'certificateModal') {
+                closeCertificate();
+            }
+        });
+
+        // Fechar com ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('certificateModal');
+                if (modal.classList.contains('active')) {
+                    closeCertificate();
+                }
+            }
+        });
+
         // Toggle de tema
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
@@ -242,6 +531,9 @@
                 localStorage.setItem('theme', 'light');
             }
         });
+
+        // Inicializar proteções ao carregar a página
+        document.addEventListener('DOMContentLoaded', initializeProtections);
     </script>
 </body>
 </html>
