@@ -681,67 +681,151 @@
                     <span class="material-symbols-outlined text-primary text-[20px]">work</span>
                     Projetos em Destaque
                 </h3>
-                <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Projeto 1 -->
-                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Pipelines de Dados com Apache Airflow</h4>
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Plataforma CI/CD End-to-End</h4>
                         <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
-                            Desenvolvimento de DAGs para automação de ingestão de dados de sistemas corporativos (SuiteCRM, GLPI) para data warehouse, com transformações e cargas incrementais.
+                            Pipeline CI/CD completo executado localmente, simulando serviços da AWS com LocalStack, incluindo build, testes e deploy em Kubernetes.
                         </p>
                         <div class="flex flex-wrap gap-1">
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Airflow</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Python</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">GitHub Actions</span>
                             <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Docker</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">PostgreSQL</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Kubernetes</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">LocalStack</span>
                         </div>
                     </div>
 
                     <!-- Projeto 2 -->
-                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Dashboards Power BI para Logística</h4>
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Pipeline de Dados em Tempo Real</h4>
                         <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
-                            Criação de dashboards interativos para monitoramento de KPIs logísticos (estoque, devolução, performance), integrando dados de SAP ECC e WMS com DAX avançado e Power Query.
+                            Ingestão e processamento de dados em tempo real utilizando Azurite, Apache Kafka e Apache Spark para transformações.
                         </p>
                         <div class="flex flex-wrap gap-1">
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Power BI</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">DAX</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Power Query</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">SAP</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Apache Kafka</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Apache Spark</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Azurite</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Python</span>
                         </div>
                     </div>
 
                     <!-- Projeto 3 -->
-                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Automação de Processos com Python</h4>
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">IaC Multi-Cloud com Terraform</h4>
                         <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
-                            Scripts Python para automação de extração, transformação e carga de dados (ETL), redução de processos manuais em 80%, usando pandas, openpyxl e integrações com APIs REST.
+                            Provisionamento automatizado de infraestrutura com Terraform, módulos reutilizáveis para AWS e Azure.
                         </p>
                         <div class="flex flex-wrap gap-1">
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Python</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">pandas</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">APIs REST</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Automação</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Terraform</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">LocalStack</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Azurite</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">GitOps</span>
                         </div>
                     </div>
 
                     <!-- Projeto 4 -->
-                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Sistema de Gerenciamento Financeiro (Java/Spring)</h4>
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Stack de Monitoramento Completa</h4>
                         <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
-                            API REST para gerenciamento de financiamento imobiliário com Java/Spring Boot, MySQL, validações de negócio, DTOs e arquitetura em camadas (Controller, Service, Repository).
+                            Observabilidade completa com coleta de métricas, logs e traces. Dashboards customizados e alertas inteligentes.
                         </p>
                         <div class="flex flex-wrap gap-1">
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Java</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Spring Boot</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">MySQL</span>
-                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">REST API</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Prometheus</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Grafana</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Loki</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Jaeger</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Pipeline de Segurança Automatizada</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            DevSecOps com análise de segurança em todas as fases: SAST, DAST, scan de vulnerabilidades e gates automáticos.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Trivy</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Jenkins</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">GitHub Actions</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">SonarQube</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Chaos Engineering em Kubernetes</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            Simulação controlada de falhas em workloads Kubernetes, testando resiliência e auto-scaling.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Chaos Mesh</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Kubernetes</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Prometheus</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Grafana</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 7 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Blue-Green & Canary Deploy</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            Estratégias de deploy progressivo com rollback automático em Kubernetes e análise de métricas em tempo real.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Helm</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">NGINX Ingress</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Kubernetes</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Argo Rollouts</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 8 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Plataforma DevOps Interna</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            Portal interno para visualização de pipelines, métricas e status de serviços cloud em dashboard unificado.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Grafana</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Kubernetes</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">LocalStack</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Azurite</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 9 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">Automação de Rotinas DevOps</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            Scripts para automação de backups, health checks, restart automático e validações operacionais.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Bash</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Python</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Cron</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Ansible</span>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 10 -->
+                    <div class="p-4 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2">GitOps com ArgoCD e Flux</h4>
+                        <p class="text-xs text-slate-600 dark:text-gray-400 mb-3">
+                            Gerenciamento declarativo de infraestrutura em Kubernetes com sincronização automática e rollback simplificado.
+                        </p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">ArgoCD</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Flux</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Kubernetes</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded">Helm</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="mt-4 pt-4 border-t border-slate-200 dark:border-white/10">
-                    <a href="https://github.com/RafaGarciaDev" target="_blank" class="flex items-center justify-center gap-2 text-sm text-primary hover:text-blue-600 font-medium transition-colors">
-                        <span>Ver todos os projetos no GitHub</span>
+                <div class="mt-6 pt-4 border-t border-slate-200 dark:border-white/10">
+                    <a href="projetos.html" class="flex items-center justify-center gap-2 text-sm text-primary hover:text-blue-600 font-medium transition-colors">
+                        <span>Ver todos os detalhes dos projetos</span>
                         <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                     </a>
                 </div>
@@ -789,7 +873,7 @@
                 <ul class="space-y-4 text-sm max-w-md mx-auto">
                     <li class="flex items-center gap-3 justify-center">
                         <span class="material-symbols-outlined text-primary">mail</span>
-                        <a href="mailto:rafael.garcia21@outlook.com" class="hover:text-primary transition-colors">rafael.garcia21@outlook.com</a>
+                        <a href="/cdn-cgi/l/email-protection#9eecfff8fffbf2b0f9ffecfdf7ffacafdef1ebeaf2f1f1f5b0fdf1f3" class="hover:text-primary transition-colors"><span class="__cf_email__" data-cfemail="89fbe8efe8ece5a7eee8fbeae0e8bbb8c9e6fcfde5e6e6e2a7eae6e4">[email&#160;protected]</span></a>
                     </li>
                     <li class="flex items-center gap-3 justify-center">
                         <span class="material-symbols-outlined text-primary">location_on</span>
@@ -868,7 +952,7 @@
         </a>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Toggle de tema
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');

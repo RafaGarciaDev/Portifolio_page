@@ -1,0 +1,190 @@
+# Como Adicionar Novos Certificados
+
+Este guia explica como adicionar novos certificados ao portfólio.
+
+## Estrutura do Sistema
+
+O sistema possui duas seções principais:
+1. **Certificados Acadêmicos** - Graduações, Pós-graduações e Cursos Técnicos
+2. **Certificados Complementares** - Certificações Profissionais e Cursos
+
+---
+
+## Passo a Passo para Adicionar um Certificado
+
+### 1️⃣ ADICIONAR O CARD VISUAL (HTML)
+
+Localize a seção apropriada no HTML:
+- **Acadêmicos**: Procure por `<!-- ==================== CERTIFICADOS ACADÊMICOS ==================== -->`
+- **Complementares**: Procure por `<!-- ==================== CERTIFICADOS PROFISSIONAIS ==================== -->`
+
+**Exemplo de estrutura de um card:**
+
+```html
+<!-- NOME_INSTITUIÇÃO - Tipo de Certificado -->
+<!-- Certificado: Nome do Certificado -->
+<!-- Status: ATIVO - Certificado disponível -->
+<div onclick="openCertModal('nome_instituicao')" class="cert-card cursor-pointer bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-4 border-2 border-blue-200 dark:border-blue-700 hover:border-primary transition-all shadow-md hover:shadow-xl">
+    <div class="aspect-square bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg mb-3 flex items-center justify-center p-2">
+        <span class="text-white font-bold text-xl">LOGO</span>
+    </div>
+    <h3 class="font-bold text-sm mb-1">Nome da Instituição</h3>
+    <p class="text-xs text-slate-500 dark:text-gray-400">Área/Curso</p>
+    <span class="inline-block mt-2 px-2 py-0.5 bg-blue-600 text-white text-[10px] font-bold rounded-full">TIPO</span>
+</div>
+```
+
+**Personalizações importantes:**
+- `onclick="openCertModal('nome_instituicao')"` - Use o mesmo nome que você usará no JavaScript
+- Cores do gradiente - Escolha cores que representem a instituição
+- `TIPO` - PÓS, TECNÓLOGO, BACHARELADO, TÉCNICO, MBA, etc.
+
+---
+
+### 2️⃣ ADICIONAR OS DADOS DO CERTIFICADO (JavaScript)
+
+Localize a seção de JavaScript:
+```javascript
+const certificates = {
+```
+
+Adicione o objeto do certificado na seção apropriada:
+
+**Para certificado único:**
+```javascript
+// NOME_INSTITUIÇÃO - Descrição
+nome_instituicao: {
+    name: 'Nome da Instituição',
+    certs: [
+        {
+            title: 'Nome Completo do Certificado',
+            url: 'https://drive.google.com/file/d/ID_DO_ARQUIVO/preview',
+            date: '2024'
+        }
+    ]
+},
+```
+
+**Para múltiplos certificados da mesma instituição:**
+```javascript
+// INSTITUIÇÃO - Descrição
+// X certificados disponíveis: Cert1, Cert2, Cert3
+nome_instituicao: {
+    name: 'Nome da Instituição',
+    certs: [
+        {
+            title: 'Primeiro Certificado',
+            url: 'https://drive.google.com/file/d/ID_ARQUIVO1/preview',
+            date: '2024'
+        },
+        {
+            title: 'Segundo Certificado',
+            url: 'https://drive.google.com/file/d/ID_ARQUIVO2/preview',
+            date: '2023'
+        }
+    ]
+},
+```
+
+---
+
+## 📋 Checklist de Adição
+
+- [ ] Comentário descritivo adicionado no HTML
+- [ ] Card HTML criado com onclick correto
+- [ ] Cores e estilo visual definidos
+- [ ] Badge de tipo correto (PÓS, MBA, etc.)
+- [ ] Objeto JavaScript criado
+- [ ] URL do Google Drive correta (formato /preview)
+- [ ] Nome da instituição no JavaScript igual ao onclick
+- [ ] Comentários descritivos no JavaScript
+- [ ] Testar o clique no card
+
+---
+
+## 🎨 Paleta de Cores Sugeridas
+
+### Certificados Acadêmicos
+- **Azul/Índigo**: `from-blue-50 to-indigo-50` / `from-blue-600 to-indigo-700`
+- **Roxo/Rosa**: `from-purple-50 to-pink-50` / `from-purple-600 to-pink-700`
+- **Verde/Teal**: `from-green-50 to-teal-50` / `from-green-600 to-teal-600`
+- **Laranja/Vermelho**: `from-orange-50 to-red-50` / `from-orange-600 to-red-600`
+
+### Certificados Complementares
+Mesmas cores, mas prefira usar `bg-white dark:bg-slate-800` para fundo branco
+
+---
+
+## 🔗 Formato da URL do Google Drive
+
+1. Faça upload do certificado no Google Drive
+2. Clique com botão direito → "Compartilhar"
+3. Altere para "Qualquer pessoa com o link pode visualizar"
+4. Copie o ID do arquivo (entre `/d/` e `/view`)
+5. Use o formato: `https://drive.google.com/file/d/ID_DO_ARQUIVO/preview`
+
+---
+
+## ⚠️ Importante
+
+- **Nome único**: Cada instituição deve ter um nome único (ex: `fiap`, `google`, `unopar`)
+- **Consistência**: Use o mesmo nome no `onclick` do HTML e na chave do objeto JavaScript
+- **Comentários**: Sempre adicione comentários descritivos para facilitar manutenção futura
+- **Teste**: Teste o certificado após adicionar para garantir que está funcionando
+
+---
+
+## 📝 Exemplo Completo
+
+### HTML:
+```html
+<!-- ALURA - Cursos Online -->
+<!-- Certificado: Formação Python -->
+<!-- Status: ATIVO - Certificado disponível -->
+<div onclick="openCertModal('alura')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+    <div class="aspect-square bg-gradient-to-br from-cyan-600 to-blue-700 rounded-lg mb-3 flex items-center justify-center">
+        <span class="text-white font-bold text-2xl">ALURA</span>
+    </div>
+    <h3 class="font-bold text-sm mb-1">Alura</h3>
+    <p class="text-xs text-slate-500 dark:text-gray-400">Formação Python</p>
+</div>
+```
+
+### JavaScript:
+```javascript
+// ALURA - Plataforma de Cursos
+alura: {
+    name: 'Alura',
+    certs: [
+        {
+            title: 'Formação Python para Data Science',
+            url: 'https://drive.google.com/file/d/ABC123XYZ/preview',
+            date: '2024'
+        }
+    ]
+},
+```
+
+---
+
+## 🚀 Dicas Extras
+
+1. **Organize por categoria**: Mantenha a ordem alfabética ou por relevância
+2. **Use ícones**: Considere usar Material Symbols quando apropriado
+3. **Mantenha consistência**: Use o mesmo padrão de cores para instituições similares
+4. **Atualize estatísticas**: Lembre-se de atualizar os números no topo da página
+5. **Backup**: Sempre faça backup antes de modificar o arquivo
+
+---
+
+## 📞 Estrutura de Suporte
+
+Se você encontrar problemas:
+1. Verifique os comentários no código
+2. Compare com certificados existentes
+3. Teste em ambiente local primeiro
+4. Valide as URLs do Google Drive
+
+---
+
+**Última atualização**: Janeiro 2026
