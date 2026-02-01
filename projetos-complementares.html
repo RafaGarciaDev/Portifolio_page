@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfólio DevOps - Projetos Complementares</title>
+    
+    <!-- Google Fonts - Material Icons e Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Configuração personalizada do Tailwind -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "primary-dark": "#3b82f6", 
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "neon": "0 0 15px rgba(13,89,242,0.15)",
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <!-- Estilos customizados -->
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        
+        /* Container responsivo com breakpoints personalizados */
+        @media (min-width: 640px) {
+            .container-responsive {
+                max-width: 640px;
+            }
+        }
+        @media (min-width: 768px) {
+            .container-responsive {
+                max-width: 768px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container-responsive {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden font-display transition-colors duration-300">
+    <div class="container-responsive mx-auto">
+        
+        <!-- ============================================ -->
+        <!-- HEADER - Navegação superior fixa             -->
+        <!-- ============================================ -->
+        <div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
+            <!-- Botão voltar -->
+            <a href="index.html" class="text-slate-900 dark:text-white flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors">
+                <span class="material-symbols-outlined text-[20px] sm:text-[24px]">arrow_back</span>
+            </a>
+            
+            <!-- Título centralizado -->
+            <h2 class="text-slate-900 dark:text-white text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-0">
+                Labs & Projetos Complementares
+            </h2>
+            
+            <!-- Toggle de tema (dark/light) -->
+            <div class="w-10 sm:w-12 items-center justify-end flex">
+                <button id="themeToggle" class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors">
+                    <span id="themeIcon" class="material-symbols-outlined text-[20px]">light_mode</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- CONTEÚDO PRINCIPAL                           -->
+        <!-- ============================================ -->
+        <div class="flex-1 flex flex-col pb-24">
+            
+            <!-- Seção de introdução -->
+            <div class="px-4 sm:px-6 pt-6 pb-4">
+                <h1 class="text-slate-900 dark:text-white tracking-tight text-2xl sm:text-[28px] lg:text-3xl font-bold leading-tight pb-3 transition-colors duration-300">
+                    Projetos Complementares & Labs
+                </h1>
+                
+                <p class="text-slate-600 dark:text-slate-300 text-sm font-body leading-relaxed transition-colors duration-300">
+                    Esta seção reúne projetos experimentais, provas de conceito e estudos técnicos desenvolvidos para aprofundamento em Engenharia de Dados, Cloud e DevOps. Os projetos principais do portfólio representam experiências completas aplicadas a contextos reais, enquanto os labs apresentados aqui têm caráter exploratório e técnico.
+                </p>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- SEÇÃO: LABS DE ENGENHARIA DE DADOS          -->
+            <!-- ============================================ -->
+            <div class="mt-4">
+                <h2 class="text-slate-900 dark:text-white tracking-tight text-xl sm:text-2xl font-bold leading-tight px-4 sm:px-6 pb-3 transition-colors duration-300">
+                    Labs de Engenharia de Dados
+                </h2>
+
+                <!-- Lab 1: Pipeline de Streaming com Kafka -->
+                <div class="p-4 sm:p-6 pt-4">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <!-- Card content -->
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Streaming • Real-time
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Pipeline de Streaming com Kafka
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Kafka
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Processamento de eventos em tempo real com Apache Kafka, incluindo producers, consumers e stream processing com Kafka Streams.
+                            </p>
+
+                            <!-- Stack tecnológica -->
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Kafka</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Python</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Docker</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Confluent</span>
+                            </div>
+
+                            <!-- Link para GitHub -->
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 2: ETL com Apache Spark -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Big Data • Processamento Distribuído
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        ETL com Apache Spark
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Spark
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Pipeline ETL distribuído utilizando PySpark para transformação de grandes volumes de dados com otimizações de particionamento.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">PySpark</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Delta Lake</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Parquet</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">SQL</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 3: Orquestração com Airflow -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Orquestração • Workflow
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Orquestração com Apache Airflow
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Airflow
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                DAGs complexos para orquestração de pipelines de dados, com retries, alertas e monitoramento de execução.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Airflow</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Python</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">PostgreSQL</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Docker</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 4: Data Lake com MinIO -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Storage • Object Storage
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Data Lake Local com MinIO
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        MinIO
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Implementação de data lake local com MinIO S3-compatible, incluindo versionamento, lifecycle policies e integração com ferramentas de análise.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">MinIO</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">S3 API</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Python</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Docker</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 5: Data Quality com Great Expectations -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Data Quality • Validação
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Validação de Dados com Great Expectations
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        GX
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Framework de qualidade de dados com expectativas customizadas, documentação automática e validações integradas ao pipeline.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Great Expectations</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Python</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Pandas</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">SQL</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ============================================ -->
+            <!-- SEÇÃO: LABS DE DEVOPS & CLOUD               -->
+            <!-- ============================================ -->
+            <div class="mt-6">
+                <h2 class="text-slate-900 dark:text-white tracking-tight text-xl sm:text-2xl font-bold leading-tight px-4 sm:px-6 pb-3 transition-colors duration-300">
+                    Labs de DevOps & Cloud
+                </h2>
+
+                <!-- Lab 1: Service Mesh com Istio -->
+                <div class="p-4 sm:p-6 pt-4">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Service Mesh • Microservices
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Service Mesh com Istio
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Istio
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Implementação de service mesh para controle de tráfego, segurança mTLS, observabilidade e resiliência em microserviços.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Istio</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Kubernetes</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Envoy</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Kiali</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 2: Infraestrutura como Código com Terraform -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        IaC • Multi-Cloud
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Infraestrutura Multi-Cloud com Terraform
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Terraform
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Módulos reutilizáveis de infraestrutura para AWS, Azure e GCP, com state management remoto e workflows de automação.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Terraform</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">AWS</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Azure</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">HCL</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 3: Observabilidade com Grafana Stack -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Observabilidade • Monitoring
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Stack de Observabilidade Completo
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Grafana
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Plataforma de observabilidade com Prometheus, Loki, Tempo e Grafana para métricas, logs, traces e dashboards centralizados.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Grafana</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Prometheus</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Loki</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Tempo</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 4: CI/CD com GitHub Actions -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        CI/CD • Automação
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Pipelines Avançados com GitHub Actions
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        GitHub
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Workflows reutilizáveis, matriz de testes, deploy condicional, integração com SonarQube e notificações customizadas.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">GitHub Actions</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">YAML</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Docker</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">SonarQube</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 5: Container Security -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Security • Container Hardening
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Segurança de Containers e Imagens
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Trivy
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Scanning de vulnerabilidades, assinatura de imagens, policies com OPA e runtime security com Falco.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Trivy</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Falco</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">OPA</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Cosign</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lab 6: Kubernetes Operators -->
+                <div class="p-4 sm:p-6 pt-0">
+                    <div class="relative group overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/50 shadow-soft transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600">
+                        
+                        <div class="p-4 sm:p-5 flex flex-col gap-3">
+                            <div class="flex justify-between items-start gap-3">
+                                <div class="flex-1">
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold tracking-wide uppercase mb-1">
+                                        Kubernetes • Custom Resources
+                                    </p>
+                                    <h3 class="text-slate-900 dark:text-white text-lg sm:text-xl font-bold leading-tight">
+                                        Desenvolvimento de Kubernetes Operators
+                                    </h3>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-gray-800/50 rounded-lg px-3 py-1 border border-slate-200 dark:border-gray-700">
+                                    <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                                        Operator SDK
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-body leading-relaxed">
+                                Custom operators para automação de tarefas complexas no Kubernetes, incluindo CRDs, controllers e reconciliation loops.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-1">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Operator SDK</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Go</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">Kubernetes</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs font-medium text-slate-700 dark:text-slate-300">CRD</span>
+                            </div>
+
+                            <a href="#" class="mt-3 flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors">
+                                <span class="material-symbols-outlined text-[18px]">code</span>
+                                <span>Ver no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ============================================ -->
+        <!-- FOOTER - Navegação inferior fixa             -->
+        <!-- ============================================ -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/90 backdrop-blur-xl border-t border-gray-200 dark:border-white/5 px-4 sm:px-6 py-3 pb-safe flex justify-around sm:justify-center sm:gap-12 items-center z-50 transition-colors duration-300 max-w-full">
+            <!-- Link: Início -->
+            <a href="index.html" class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">home</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Início</span>
+            </a>
+            
+            <!-- Link: Trabalho (Projetos Principais) -->
+            <a href="projetos.html" class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">work</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Trabalho</span>
+            </a>
+            
+            <!-- Link Ativo: Labs (página atual) -->
+            <div class="flex flex-col items-center gap-1 opacity-100 cursor-pointer">
+                <span class="material-symbols-outlined text-primary text-[22px] sm:text-[24px] shadow-[0_4px_10px_rgba(13,89,242,0.25)] dark:shadow-[0_0_15px_rgba(13,89,242,0.5)] rounded-full transition-all duration-300">science</span>
+                <span class="text-[10px] font-bold text-primary transition-colors duration-300">Labs</span>
+            </div>
+            
+            <!-- Link: Certificados -->
+            <a href="certificados.html" class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">workspace_premium</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Certificados</span>
+            </a>
+            
+            <!-- Link: Contato -->
+            <div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white text-[22px] sm:text-[24px] transition-colors duration-300">mail</span>
+                <span class="text-[10px] font-medium text-slate-900 dark:text-white transition-colors duration-300">Contato</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT - Toggle de tema e interações    -->
+    <!-- ============================================ -->
+    <script>
+        // ========================================
+        // TOGGLE DE TEMA (Dark/Light Mode)
+        // ========================================
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Verifica preferência salva no localStorage ou preferência do sistema
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Aplica o tema inicial
+        if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+            html.classList.remove('dark');
+            themeIcon.textContent = 'dark_mode';
+        } else {
+            html.classList.add('dark');
+            themeIcon.textContent = 'light_mode';
+        }
+
+        // Event listener para alternar tema
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            
+            if (html.classList.contains('dark')) {
+                themeIcon.textContent = 'light_mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = 'dark_mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
