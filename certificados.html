@@ -258,11 +258,20 @@
                     </div>
                     
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <!-- ==================== CERTIFICADOS PROFISSIONAIS ==================== -->
+                        <!-- 
+                        ╔═══════════════════════════════════════════════════════════════════════════════╗
+                        ║                    CERTIFICADOS PROFISSIONAIS ATIVOS                          ║
+                        ║                          (CERTIFICADORAS 1-7)                                 ║
+                        ╚═══════════════════════════════════════════════════════════════════════════════╝
+                        -->
                         
-                        <!-- FIAP - MBA -->
-                        <!-- Certificado: MBA em Engenharia de Software + 7 especializações -->
-                        <!-- Status: ATIVO - 8 certificados disponíveis -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #1: FIAP - MBA em Engenharia de Software                     -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'fiap' (usar em openCertModal)                              -->
+                        <!-- Logo: assets/logos/FIAP.jpg                                                -->
+                        <!-- Certificados: 8 (MBA + 7 especializações)                                  -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('fiap')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
                             <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
                                 <img src="assets/logos/FIAP.jpg" alt="FIAP Logo" style="width: 100px; height: 100px; object-fit: contain;" />
@@ -272,43 +281,43 @@
                             <span class="inline-block mt-2 px-2 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-full">8 CERTS</span>
                         </div>
 
-                        <!-- GOOGLE - Coursera -->
-                        <!-- Certificados: BI, Data Analytics, IT Automation Python -->
-                        <!-- Status: ATIVO - 3 certificados disponíveis -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #2: GOOGLE - Certificados via Coursera                       -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'google' (usar em openCertModal)                            -->
+                        <!-- Logo: assets/logos/Google.png                                              -->
+                        <!-- Certificados: 3 (BI, Data Analytics, IT Automation Python)                 -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('google')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
-                            <div class="aspect-square bg-white dark:bg-slate-700 rounded-lg mb-3 flex items-center justify-center p-3">
-                                <svg viewBox="0 0 272 92" class="w-full h-full">
-                                    <path fill="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"></path>
-                                    <path fill="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"></path>
-                                    <path fill="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"></path>
-                                    <path fill="#34A853" d="M225 3v65h-9.5V3h9.5z"></path>
-                                    <path fill="#EA4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"></path>
-                                    <path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"></path>
-                                </svg>
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/google.webp" alt="Google Logo" style="width: 100px; height: 100px; object-fit: contain;" />
                             </div>
                             <h3 class="font-bold text-sm mb-1">Google</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">by Coursera</p>
                         </div>
 
-                        <!-- MICROSOFT - Azure -->
-                        <!-- Certificado: Azure Fundamentals AZ-900 -->
-                        <!-- Status: ATIVO - Certificado disponível -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #3: MICROSOFT - Azure Certification                          -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'microsoft' (usar em openCertModal)                         -->
+                        <!-- Logo: assets/logos/Microsoft.png                                           -->
+                        <!-- Certificados: 1 (Azure Fundamentals AZ-900)                                -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('microsoft')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
-                            <div class="aspect-square bg-white dark:bg-slate-700 rounded-lg mb-3 flex items-center justify-center p-3">
-                                <div class="grid grid-cols-2 gap-1 w-16 h-16">
-                                    <div class="bg-[#f25022]"></div>
-                                    <div class="bg-[#7fba00]"></div>
-                                    <div class="bg-[#00a4ef]"></div>
-                                    <div class="bg-[#ffb900]"></div>
-                                </div>
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/Microsoft-logo.png" alt="Microsoft Logo" style="width: 100px; height: 100px; object-fit: contain;" />
                             </div>
                             <h3 class="font-bold text-sm mb-1">Microsoft</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Azure Certified</p>
                         </div>
 
-                        <!-- IBM - Professional Certificates -->
-                        <!-- Certificados: Data Science, AI Engineering -->
-                        <!-- Status: ATIVO - 2 certificados disponíveis -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #4: IBM - Professional Certificates                          -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'ibm' (usar em openCertModal)                               -->
+                        <!-- Logo: assets/logos/ibm.png                                                 -->
+                        <!-- Certificados: 2 (Data Science, AI Engineering)                             -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('ibm')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
                             <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
                                 <img src="assets/logos/ibm.png" alt="IBM Logo" style="width: 100px; height: 100px; object-fit: contain;" />
@@ -317,9 +326,13 @@
                             <p class="text-xs text-slate-500 dark:text-gray-400">AI & Cloud</p>
                         </div>
 
-                        <!-- CERTIPROF - Scrum -->
-                        <!-- Certificado: Scrum Master Professional Certificate (SMPC) -->
-                        <!-- Status: ATIVO - Certificado disponível -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #5: CERTIPROF - Scrum Certification                          -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'certiprof' (usar em openCertModal)                         -->
+                        <!-- Logo: assets/logos/CERTIPROF.jpg                                           -->
+                        <!-- Certificados: 1 (Scrum Master Professional Certificate)                    -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('certiprof')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
                             <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
                                 <img src="assets/logos/CERTIPROF.jpg" alt="CertiProf Logo" style="width: 100px; height: 100px; object-fit: contain;" />
@@ -328,9 +341,13 @@
                             <p class="text-xs text-slate-500 dark:text-gray-400">Scrum Master</p>
                         </div>
 
-                        <!-- CISCO - Networking -->
-                        <!-- Certificado: CCNA - Cisco Certified Network Associate -->
-                        <!-- Status: ATIVO - Certificado disponível -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #6: CISCO - Networking Certification                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'cisco' (usar em openCertModal)                             -->
+                        <!-- Logo: assets/logos/Cisco.png                                               -->
+                        <!-- Certificados: 1 (CCNA - Cisco Certified Network Associate)                 -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('cisco')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
                             <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
                                 <img src="assets/logos/Cisco.png" alt="Cisco Logo" style="width: 100px; height: 100px; object-fit: contain;" />
@@ -339,16 +356,170 @@
                             <p class="text-xs text-slate-500 dark:text-gray-400">Networking</p>
                         </div>
 
-                        <!-- AWS - Amazon Web Services -->
-                        <!-- Certificado: AWS Certified Cloud Practitioner -->
-                        <!-- Status: ATIVO - Certificado disponível -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #7: AWS - Amazon Web Services                                -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'aws' (usar em openCertModal)                               -->
+                        <!-- Logo: assets/logos/Amazon.jpg                                              -->
+                        <!-- Certificados: 1 (AWS Certified Cloud Practitioner)                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
                         <div onclick="openCertModal('aws')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
-                            <div class="aspect-square bg-slate-900 dark:bg-slate-900 rounded-lg mb-3 flex items-center justify-center p-3">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
                                 <img src="assets/logos/Amazon.jpg" alt="AWS Logo" style="width: 100px; height: 100px; object-fit: contain;" />
                             </div>
                             <h3 class="font-bold text-sm mb-1">Amazon AWS</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Cloud Practitioner</p>
                         </div>
+
+                        <!-- 
+                        ╔═══════════════════════════════════════════════════════════════════════════════╗
+                        ║              TEMPLATES PARA NOVAS CERTIFICADORAS (8-17)                       ║
+                        ║                                                                               ║
+                        ║  📋 INSTRUÇÕES PARA ADICIONAR NOVA CERTIFICADORA:                            ║
+                        ║                                                                               ║
+                        ║  1️⃣ Descomente o bloco da certificadora desejada (#8 a #17)                  ║
+                        ║  2️⃣ Altere o ID JavaScript (ex: 'cert8' → 'oracle')                          ║
+                        ║  3️⃣ Altere o caminho do logo (ex: CERT8.png → Oracle.png)                    ║
+                        ║  4️⃣ Altere o nome da certificadora (ex: Certificadora 8 → Oracle)            ║
+                        ║  5️⃣ Altere a descrição (ex: Descrição → Database Certified)                  ║
+                        ║  6️⃣ Vá até a seção JavaScript e descomente o bloco correspondente            ║
+                        ║  7️⃣ Configure os certificados no JavaScript                                  ║
+                        ║                                                                               ║
+                        ╚═══════════════════════════════════════════════════════════════════════════════╝
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #8: PEOPLECERT - ITIL V4                                     -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- ID JavaScript: 'peoplecert' (usar em openCertModal)                       -->
+                        <!-- Logo: assets/logos/PeopleCert Logo.jpg                                    -->
+                        <!-- Certificados: 1 (ITIL V4 Foundation)                                       -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <div onclick="openCertModal('peoplecert')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/PeopleCert Logo.jpg" alt="PeopleCert Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">PeopleCert</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Gestão de Serviços de TI (ITSM)</p>
+                        </div>
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #9: TEMPLATE - Descomente para usar                          -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert9')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT9.png" alt="Certificadora 9 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 9</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #10: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert10')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT10.png" alt="Certificadora 10 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 10</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #11: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert11')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT11.png" alt="Certificadora 11 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 11</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #12: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert12')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT12.png" alt="Certificadora 12 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 12</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #13: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert13')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT13.png" alt="Certificadora 13 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 13</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #14: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert14')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT14.png" alt="Certificadora 14 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 14</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #15: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert15')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT15.png" alt="Certificadora 15 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 15</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #16: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert16')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT16.png" alt="Certificadora 16 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 16</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!-- CERTIFICADORA #17: TEMPLATE - Descomente para usar                         -->
+                        <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+                        <!--
+                        <div onclick="openCertModal('cert17')" class="cert-card cursor-pointer bg-white dark:bg-slate-800 rounded-xl p-4 border-2 border-slate-200 dark:border-white/10 hover:border-primary transition-all shadow-sm">
+                            <div class="bg-white dark:bg-white rounded-lg mb-3 flex items-center justify-center p-4" style="width: 200px; height: 200px; max-width: 100%;">
+                                <img src="assets/logos/CERT17.png" alt="Certificadora 17 Logo" style="width: 100px; height: 100px; object-fit: contain;" />
+                            </div>
+                            <h3 class="font-bold text-sm mb-1">Certificadora 17</h3>
+                            <p class="text-xs text-slate-500 dark:text-gray-400">Descrição</p>
+                        </div>
+                        -->
+
                     </div>
                 </div>
             </div>
@@ -405,17 +576,32 @@
     </div>
 
     <script>
-        // ==================== MAPEAMENTO DE CERTIFICADOS ====================
-        // Estrutura: Cada instituição possui um objeto com nome e array de certificados
-        // Para adicionar novo certificado:
-        // 1. Adicione o card HTML na seção correspondente (Acadêmicos ou Complementares)
-        // 2. Adicione o objeto abaixo seguindo o padrão
-        // 3. Use onclick="openCertModal('nome_da_instituicao')" no card HTML
+        // @ts-nocheck
+        // ╔═══════════════════════════════════════════════════════════════════════════════╗
+        // ║                    MAPEAMENTO DE CERTIFICADOS                                 ║
+        // ║                                                                               ║
+        // ║  📋 ESTRUTURA: Cada certificadora possui um objeto com nome e array de certs ║
+        // ║                                                                               ║
+        // ║  🔧 COMO ADICIONAR NOVO CERTIFICADO:                                         ║
+        // ║  1️⃣ Descomente o bloco da certificadora (#8 a #17)                           ║
+        // ║  2️⃣ Altere o ID (ex: cert8: → oracle:)                                       ║
+        // ║  3️⃣ Altere o name (ex: 'Certificadora 8' → 'Oracle')                         ║
+        // ║  4️⃣ Configure os certificados no array certs[]                               ║
+        // ║  5️⃣ Para cada certificado, preencha: title, url, date                        ║
+        // ║  6️⃣ Volte ao HTML e descomente o card correspondente                         ║
+        // ║  7️⃣ No HTML, use o mesmo ID em openCertModal('oracle')                       ║
+        // ║                                                                               ║
+        // ║  💡 URL FORMATO: Use Google Drive preview:                                   ║
+        // ║     https://drive.google.com/file/d/SEU_ID_AQUI/preview                      ║
+        // ║                                                                               ║
+        // ╚═══════════════════════════════════════════════════════════════════════════════╝
         
         const certificates = {
-            // ==================== CERTIFICADOS ACADÊMICOS ====================
+            // ═══════════════════════════════════════════════════════════════════════════
+            //                    CERTIFICADOS ACADÊMICOS (1-4)
+            // ═══════════════════════════════════════════════════════════════════════════
             
-            // UNOPAR - Pós-Graduação
+            // ACADÊMICO #1: UNOPAR - Pós-Graduação
             unopar: {
                 name: 'UNOPAR',
                 certs: [
@@ -427,7 +613,7 @@
                 ]
             },
             
-            // UNISAL - Graduação Tecnólogo
+            // ACADÊMICO #2: UNISAL - Graduação Tecnólogo
             unisal: {
                 name: 'UNISAL',
                 certs: [
@@ -439,7 +625,7 @@
                 ]
             },
             
-            // ANHANGUERA - Graduação Bacharelado
+            // ACADÊMICO #3: ANHANGUERA - Graduação Bacharelado
             anhanguera: {
                 name: 'Anhanguera',
                 certs: [
@@ -451,7 +637,7 @@
                 ]
             },
             
-            // SENAI - Curso Técnico
+            // ACADÊMICO #4: SENAI - Curso Técnico
             senai: {
                 name: 'SENAI',
                 certs: [
@@ -463,10 +649,16 @@
                 ]
             },
             
-            // ==================== CERTIFICADOS COMPLEMENTARES ====================
+            // ═══════════════════════════════════════════════════════════════════════════
+            //              CERTIFICADOS COMPLEMENTARES ATIVOS (1-7)
+            // ═══════════════════════════════════════════════════════════════════════════
             
-            // FIAP - MBA em Engenharia de Software
-            // 8 certificados disponíveis: MBA principal + 7 especializações
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #1: FIAP - MBA em Engenharia de Software
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 8 certificados (MBA principal + 7 especializações)
+            // ID HTML: openCertModal('fiap')
+            // ───────────────────────────────────────────────────────────────────────────
             fiap: {
                 name: 'FIAP',
                 certs: [
@@ -513,8 +705,12 @@
                 ]
             },
             
-            // GOOGLE - Certificados via Coursera
-            // 3 certificados disponíveis: BI, Data Analytics, IT Automation Python
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #2: GOOGLE - Certificados via Coursera
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 3 certificados (BI, Data Analytics, IT Automation Python)
+            // ID HTML: openCertModal('google')
+            // ───────────────────────────────────────────────────────────────────────────
             google: {
                 name: 'Google',
                 certs: [
@@ -536,7 +732,12 @@
                 ]
             },
             
-            // MICROSOFT - Azure Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #3: MICROSOFT - Azure Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 1 certificado (Azure Fundamentals AZ-900)
+            // ID HTML: openCertModal('microsoft')
+            // ───────────────────────────────────────────────────────────────────────────
             microsoft: {
                 name: 'Microsoft',
                 certs: [
@@ -548,8 +749,12 @@
                 ]
             },
             
-            // IBM - Professional Certificates
-            // 2 certificados disponíveis: Data Science e AI Engineering
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #4: IBM - Professional Certificates
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 2 certificados (Data Science, AI Engineering)
+            // ID HTML: openCertModal('ibm')
+            // ───────────────────────────────────────────────────────────────────────────
             ibm: {
                 name: 'IBM',
                 certs: [
@@ -566,7 +771,12 @@
                 ]
             },
             
-            // CERTIPROF - Scrum Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #5: CERTIPROF - Scrum Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 1 certificado (Scrum Master Professional Certificate)
+            // ID HTML: openCertModal('certiprof')
+            // ───────────────────────────────────────────────────────────────────────────
             certiprof: {
                 name: 'CertiProf',
                 certs: [
@@ -578,7 +788,12 @@
                 ]
             },
             
-            // CISCO - Networking Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #6: CISCO - Networking Certification
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 1 certificado (CCNA)
+            // ID HTML: openCertModal('cisco')
+            // ───────────────────────────────────────────────────────────────────────────
             cisco: {
                 name: 'Cisco',
                 certs: [
@@ -590,7 +805,12 @@
                 ]
             },
             
-            // AWS - Amazon Web Services
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #7: AWS - Amazon Web Services
+            // ───────────────────────────────────────────────────────────────────────────
+            // Total: 1 certificado (AWS Certified Cloud Practitioner)
+            // ID HTML: openCertModal('aws')
+            // ───────────────────────────────────────────────────────────────────────────
             aws: {
                 name: 'Amazon AWS',
                 certs: [
@@ -601,6 +821,177 @@
                     }
                 ]
             }
+
+            // ═══════════════════════════════════════════════════════════════════════════
+            //            TEMPLATES PARA NOVAS CERTIFICADORAS (8-17)
+            // ═══════════════════════════════════════════════════════════════════════════
+            // 
+            // 📋 INSTRUÇÕES:
+            // 1. Descomente o bloco abaixo
+            // 2. Remova a vírgula ANTES do comentário de template que você vai usar
+            // 3. Adicione uma vírgula DEPOIS do bloco anterior (aws)
+            // 4. Configure: ID, name, title, url, date
+            // 5. Descomente o card HTML correspondente
+            // ═══════════════════════════════════════════════════════════════════════════
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #8: PEOPLECERT - ITIL V4
+            // ───────────────────────────────────────────────────────────────────────────
+           
+            ,peoplecert: {
+                name: 'PeopleCert',
+                certs: [
+                    {
+                        title: 'ITIL V4 Foundation',
+                        url: 'https://drive.google.com/file/d/1cInMqMAiwPiZmmIPcvroGs6951ylxfOE/preview',
+                        date: '2025'
+                    }
+                ]
+            }
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #9: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert9: {
+                name: 'Certificadora 9',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #10: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert10: {
+                name: 'Certificadora 10',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #11: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert11: {
+                name: 'Certificadora 11',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #12: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert12: {
+                name: 'Certificadora 12',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #13: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert13: {
+                name: 'Certificadora 13',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #14: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert14: {
+                name: 'Certificadora 14',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #15: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert15: {
+                name: 'Certificadora 15',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #16: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert16: {
+                name: 'Certificadora 16',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
+
+            // ───────────────────────────────────────────────────────────────────────────
+            // CERTIFICADO #17: TEMPLATE - Descomente e configure
+            // ───────────────────────────────────────────────────────────────────────────
+            /*
+            ,cert17: {
+                name: 'Certificadora 17',
+                certs: [
+                    {
+                        title: 'Nome do Certificado 1',
+                        url: 'https://drive.google.com/file/d/SEU_ID_AQUI/preview',
+                        date: '2024'
+                    }
+                ]
+            }
+            */
         };
 
         // ==================== FUNÇÕES DO MODAL ====================
