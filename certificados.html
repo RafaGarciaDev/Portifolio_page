@@ -278,7 +278,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">FIAP</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Engenharia Software</p>
-                            <span class="inline-block mt-2 px-2 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-full">8 CERTS</span>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-full">8 CERTIFICADOS</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -294,6 +294,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">Google</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">by Coursera</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-blue-600 text-white text-[10px] font-bold rounded-full">3 CERTIFICADOS</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -309,6 +310,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">Microsoft</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Azure Certified</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-cyan-600 text-white text-[10px] font-bold rounded-full">1 CERTIFICADO</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -324,6 +326,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">IBM</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">AI & Cloud</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-blue-700 text-white text-[10px] font-bold rounded-full">2 CERTIFICADOS</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -339,6 +342,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">CertiProf</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Scrum Master</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-green-600 text-white text-[10px] font-bold rounded-full">1 CERTIFICADO</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -354,6 +358,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">Cisco</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Networking</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-blue-500 text-white text-[10px] font-bold rounded-full">1 CERTIFICADO</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -369,6 +374,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">Amazon AWS</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Cloud Practitioner</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-orange-600 text-white text-[10px] font-bold rounded-full">1 CERTIFICADO</span>
                         </div>
 
                         <!-- 
@@ -401,6 +407,7 @@
                             </div>
                             <h3 class="font-bold text-sm mb-1">PeopleCert</h3>
                             <p class="text-xs text-slate-500 dark:text-gray-400">Gestão de Serviços de TI (ITSM)</p>
+                            <span class="inline-block mt-2 px-2 py-0.5 bg-purple-600 text-white text-[10px] font-bold rounded-full">1 CERTIFICADO</span>
                         </div>
 
                         <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -1061,6 +1068,7 @@
 
         // Mostrar certificado específico
         function showCertificate(url) {
+            const modal = document.getElementById('certModal');
             const certFrame = document.getElementById('certFrame');
             const loading = document.getElementById('loading');
 
@@ -1073,6 +1081,10 @@
             loading.style.background = '';
             certFrame.style.display = 'none';
             certFrame.src = '';
+
+            // ABRIR O MODAL
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
 
             // Carregar iframe
             setTimeout(() => {
